@@ -83,7 +83,7 @@ EJEMPLO:
 - saludo2='hola'+' '+'mundo' -> *concatenar hola mundo*
 - saludo3='hola'*2 -> *holahola*
 
-## 4. Datos estructurados
+## 4. DATOS ESTRUCTURADOS 
 I.  **Listas**
   
  Se puede alamcenar distintos tipos de datos en una sola lista separados por comas . Una lista es una colección ordenada y mutable de elementos. Puede contener elementos de diferentes tipos de datos. 
@@ -111,6 +111,69 @@ Tambien al igual que las listas almacenan distintos tipos de datos pero con un o
         'numero':123
     )}
 ```
+## 5. CONTROLES DE FLUJOS
+### Descisiones.
+solo se ejecura si la condicion es verdadera.Podemos hacer que si la condicion sea falsa se ejecute otro codigo.
+### sintaxis 
+primero especificar el codigo que se ejecutara si cumplo una ciondicion 
+```python 
+if condicion
+```
+el codigho que sdeseamos ejecutar si la condicion es verad.
+```python
+print("ejecuta esto")
+```
+aqui estamos del if o del si este codigo siempe se ejecutara no depende del if.
+```python
+print("esto siempre ejecuta")
+```
+si queremos quew se ejecute un codigo en caso sea falso 
+```python
+if <condicion falsa>:
+  print("solo imprime si es verdad")
+else:
+  print("si es falso impreme esto")
+```
+Ejemplitos:
+
+```python
+if 15>18:
+  print("solo imprime si es verdad")
+else:
+  print("si es falso impreme esto")
+  ```
+```python
+if 15*2=30:
+  print("solo imprime si es verdad")
+else:
+  print("si es falso impreme esto")
+ ```
+
+```python
+if condicion=True
+ print("imprime esto si es verdad")
+else:
+  print("impreme esto si es falso")
+```
+### Ciclos
+Existen dos tipos:
+* **Iterar cuando sabes la cantidad de veces a repetir**
+
+Para este caso existe el for.
+
+Sintaxis de la palabra reservada for deberemos crear una variables que almacenen El numero que iremos iterando.
+
+Luego tendremos que indicar el rango a iterar a los elementos a iterar.
+```python
+vocales=["a","e","i","o","u" ]
+for i in vocales:
+  print(i)
+ ```
+```python
+for i in range(1,5):
+  print(i)
+```
+* **Iterar cuando no sabemos la cantidad de veces a repetir**
 
 
-##  5. Funciones :blush:
+##  6. FUNCIONES :blush:
