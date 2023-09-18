@@ -174,6 +174,27 @@ for i in range(1,5):
   print(i)
 ```
 * **Iterar cuando no sabemos la cantidad de veces a repetir**
+Para eso existe el while
+```Python
+condicion= True
+while True:
+  print("hola")
+  texto=input("ingresa tu nombre o salir para terminar el programa:" )
+  if texto== "salir"
+     condicion= false
+```
 
+#  6. FUNCIONES :blush:
+EXISTEN DOS TIPOS DE FUNCIONES:
+#### 1. FUNCIONES PROPIAS DEL LENGUAJE:
+Que ya vienen creadas e insertadas en python y estan listas para ser usadas.
+tiene el nombre seguido de parentesis (), dentro de las parentesis podremos pasar lo0s dastos que necesita la funcion para ejecutarse.
 
-##  6. FUNCIONES :blush:
+EJEMPLOS:
+
+* PRINT. Esta es una funcion que nos asirver para mostrar por consola los datos.
+
+* LEN. Esta funcion nos permite saber la longitud de una lista o una string.
+INPUT. Esta funcion es una que detiene a esperar quer el usuario introduzca la informacion.
+Entre parentesis podremos escribir un mensaje de que accion realica el ususario.
+#### 2.  

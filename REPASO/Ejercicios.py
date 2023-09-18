@@ -16,11 +16,43 @@
 # la compra no supere los 1000 soles, entonces mostrar que diga 
 # "no aplicas el descuento" y mostrar el monto de la compra.
 
-Compra = float(input("Ingrese el monto de la compra: "))
+# Compra = float(input("Ingrese el monto de la compra: "))
 
-if Compra >= 1000:
-    descuento = Compra * 0.2
-    total = Compra - descuento
-    print("¡Ganaste el descuento del 20%! Ahora pagarás:", total, "soles.")
-else:
-    print("No aplicas el descuento. El monto de la compra es de:", Compra, "soles.")
+# if Compra >= 1000:
+#     descuento = Compra * 0.2
+#     total = Compra - descuento
+#     print("¡Ganaste el descuento del 20%! Ahora pagarás:", total, "soles.")
+# else:
+#     print("No aplicas el descuento. El monto de la compra es de:", Compra, "soles.")
+
+# crea un programa que me pida 5 veces un nombre y por cada vez
+# que lo pida muestre la cantidad de veces que ingreso el nombre 
+
+# for n in range (1,6):
+#     nombre=input("ingrese un nombre:" )
+#     print(f"ingresate {n} veces el nombre")
+    
+#  crea un programa que pida un numero y lo evalue con el numero premiado 
+#  si el numero ingresado es el premiado, el programa finaliza si el numero
+#  ingresado es el incorrecto el programa seguira pidiendo el numero premiado
+
+# numero_premiado = 2468
+
+# while True:
+#     numero_ingresado = int(input("Ingresa el número: "))
+#     if numero_ingresado == numero_premiado:
+#         print("¡Felicidades! haz ganado el premio.")
+#         break
+#     else:
+#         print("Sigue intentando.")
+
+numero_premiado = 2468
+condicion=True
+while condicion:
+
+    numero_ingresado = int(input("Ingresa el número: "))
+    if numero_ingresado == numero_premiado:
+        print("¡Felicidades! haz ganado el premio.")
+        condicion=False
+    else:
+        print("Sigue intentando.")
