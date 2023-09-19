@@ -1,1 +1,0 @@
-Averiguar las funciones mas usadas de Python con ejemplos

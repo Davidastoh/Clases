@@ -186,7 +186,7 @@ while True:
 
 #  6. FUNCIONES :blush:
 EXISTEN DOS TIPOS DE FUNCIONES:
-#### 1. FUNCIONES PROPIAS DEL LENGUAJE:
+### 1. FUNCIONES PROPIAS DEL LENGUAJE:
 Que ya vienen creadas e insertadas en python y estan listas para ser usadas.
 tiene el nombre seguido de parentesis (), dentro de las parentesis podremos pasar lo0s dastos que necesita la funcion para ejecutarse.
 
@@ -195,6 +195,117 @@ EJEMPLOS:
 * PRINT. Esta es una funcion que nos asirver para mostrar por consola los datos.
 
 * LEN. Esta funcion nos permite saber la longitud de una lista o una string.
-INPUT. Esta funcion es una que detiene a esperar quer el usuario introduzca la informacion.
+* INPUT. Esta funcion es una que detiene a esperar quer el usuario introduzca la informacion.
 Entre parentesis podremos escribir un mensaje de que accion realica el ususario.
-#### 2.  
+
+
+* MAX. Esta funcion nos muestra el numero mayor de una lista 
+```Python
+lista=[42,12,17]
+numero_mayor= max(lista)
+print(numero_mayor)
+```
+
+
+* MIN. Esta funcion nos muestra el numero menor de una lista
+  
+```Python
+lista=[42,12,17]
+numero_menor= min(lista)
+print(numero_menor)
+
+```
+* STRING. 
+
+Esta funcion es para comvertir de un string a un numero entero 
+```Python
+int('100') # --> 100  --> entero
+
+Esta funcion es para comvertir de un numero entero a un string
+
+str(100) # --> '100'  --> string
+```
+* APPEND. Funcion de python que nos permiten agregar un elemto al final de una lista
+```Python
+lista=[15,12,78]
+elemento=100
+lista.append(elemento)
+print(lista)
+```
+* POP. Funcion de python que nos permiten eliminar el elemto al final de una lista
+```Python
+lista=[15,12,78]
+lista.pop()
+print(lista)
+```
+* INSERT. Funcion de python que nos permiten agregar elementos en cualquier posicion de la lista para eso se le tiene que pasar dos parametros, primero indicarles al indice y el segundo el dato que se va a agregar 
+```Python
+lista_nombres=['jory','nadine','Max']
+lista_nombres.insert(1,'Max')
+print(lista_nombres)
+```
+*REMOVE. Funcion de python que nos permite eliminar elementos de cualquier posicion de una lista, esta funcion recibe solo el elemnto que deseamos eliminar.
+```Python
+lista=[2,4,7,6,5]
+lista.remove(6)
+print(lista)
+```
+SPLIT. Funcion que nos permite dividir una lista una cadena
+```Python
+cadena='hola como estan'
+lista=cadena.split()
+print(lista)
+url='www.golle.com/id=70133573'
+id=url.split('=').pop()
+print(id)
+```
+
+### 2.  FUNCIONES PROPIAS O CREADAS 
+
+**UNA FUNCION** son mini programas, tambien se les conoce como modulos o fragmentos de codigo de uso exclusivo.
+
+**PASOS PARA CREAR UNA FUNCION PROPIA.**
+
+1. Hacer uso de la palabra reservada *def*
+2. Defenir un nombre de funcion que describe que tarea va a realizar
+3. Establecer los parametros que recibira la funcion entre parentesis ().
+4. Establecer que valor o dato que va a retornar si funcion con la palabra reservada con return  
+
+**Observacion** tambien podemos hacer uso de la funcion print ()para retornar un mensaje en nuestra funcion 
+
+```Python
+def saludo():
+  print('hola este es un saludo')
+```
+como hacemos uso de la funcion?
+nombre de la funcion y parentesis
+ 
+funcion con parametros
+```Python
+def mi_print(texto):
+  print(texto)
+
+print('hola este es print de python')
+mi_print('hola este es mi_print creado')
+```
+```Python
+def suma(a,b):
+  total=a+b
+return total
+```
+EJEMPLO:
+PARA QUE SE USA ESTE FUNCION?
+para mostrar el valor maximo de una lista 
+```Python
+lista=[12,14,45,78,3,1]
+mi_print(max(lista))   #=====> 78
+
+def mi_max(lista):
+  numero_mayor=lista[0]
+  for numero in lista:
+    if numero > numero_mayor:
+      numero_mayor=numero
+  return numero_mayor
+mi_print(mi_max(lista))
+```
+
