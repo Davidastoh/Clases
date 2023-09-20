@@ -308,4 +308,21 @@ def mi_max(lista):
   return numero_mayor
 mi_print(mi_max(lista))
 ```
-
+### funciones con muchos parametros
+```Python
+def funcion(*muchos_parametros):
+  total=0
+  print(muchos_parametros)
+  for numero in muchos_parametros:
+    total=total*numero
+  return total
+print(funcion(41,22,37,44,59))
+```
+```Python
+def datos(*args):
+  nombre=args[0]
+  apellido=args[1]
+  edad=args[2]
+  return f'mi nombre es,(nombre),(apellidos)y mi edad es , (edad)'
+print(datos('Max','de la vega','50'))
+```
