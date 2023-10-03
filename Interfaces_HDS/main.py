@@ -6,8 +6,8 @@ ventana = tk.Tk()
 def saludar():
     label_saludo.config(text="¡Hola, David!")
 
-ventana.title("Mi ventana")
-ventana.geometry("400x400")
+ventana.title("Bot")
+ventana.geometry("400x200")
 
 label_saludo = tk.Label(ventana, text="Presiona el boton para saludar")
 label_saludo.pack()
