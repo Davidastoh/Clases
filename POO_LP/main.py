@@ -302,34 +302,54 @@
 # #  y 5 funcionalidades, debera crear 4 instancias de la clase mercado ejm: puesto Mechita, puesto La gringa, puesto Ojo de uva
 
 class PuestoDeMercado:
-    # Atributo de clase
-    nombre_mercado = "Max"
+    mercado = "Mercado Central"
 
-    def __init__(self, nombre, ubicacion, productos, propietario, horas_apertura):
-        # Atributos de instancia
+    def _init_(self, nombre, ubicacion, productos, empleados, horario):
         self.nombre = nombre
         self.ubicacion = ubicacion
         self.productos = productos
-        self.propietario = propietario
-        self.horas_apertura = horas_apertura
+        self.empleados = empleados
+        self.horario = horario
 
     def mostrar_informacion(self):
         print("Nombre del puesto:", self.nombre)
         print("Ubicación:", self.ubicacion)
         print("Productos:", self.productos)
-        print("Propietario:", self.propietario)
-        print("Horas de apertura:", self.horas_apertura)
+        print("Número de empleados:", self.empleados)
+        print("Horario de atención:", self.horario)
+    def cambiar_ubicacion(self, nueva_ubicacion):
+        self.ubicacion = nueva_ubicacion
+        print("La ubicación del puesto ha sido cambiada a:", self.ubicacion)
+    def agregar_producto(self, nuevo_producto):
+        self.productos.append(nuevo_producto)
+        print("Se ha agregado un nuevo producto:", nuevo_producto)
+    def contratar_empleado(self, nuevo_empleado):
+        self.empleados += 1
+        print("Se ha contratado a un nuevo empleado:", nuevo_empleado)
+    def cambiar_horario(self, nuevo_horario):
+        self.horario = nuevo_horario
+        print("El horario de atención ha sido cambiado a:", self.horario)
+# Crear instancias de la clase Puesto de Mercado
+puesto_mechita = PuestoDeMercado("Puesto Mechita", "Plaza Central", ["Frutas", "Verduras"], 2, "8am - 6pm")
+puesto_gringa = PuestoDeMercado("Puesto Gringa", "Plaza Norte", ["Carnes", "Embutidos"], 3, "9am - 7pm")
+puesto_ojo_de_uva = PuestoDeMercado("Puesto Ojo de Uva", "Plaza Sur", ["Vinos", "Licores"], 1, "10am - 8pm")
+# Modificar el atributo de clase
+PuestoDeMercado.mercado = "Mercado Central"
+# Llamar a las funcionalidades de las instancias
+puesto_mechita.mostrar_informacion()
+puesto_mechita.cambiar_ubicacion("Plaza Este")
+puesto_mechita.agregar_producto("Hortalizas")
+puesto_mechita.contratar_empleado("Ana")
+puesto_mechita.cambiar_horario("7am - 5pm")
 
-    def vender_producto(self, producto):
-        print("Se vendió el producto", producto)
+puesto_gringa.mostrar_informacion()
+puesto_gringa.cambiar_ubicacion("Plaza Oeste")
+puesto_gringa.agregar_producto("Quesos")
+puesto_gringa.contratar_empleado("Pedro")
+puesto_gringa.cambiar_horario("8am - 6pm")
 
-    def recibir_pago(self, monto):
-        print("Se recibió un pago de", monto, "pesos")
-
-    def agregar_producto(self, producto):
-        self.productos.append(producto)
-        print("Se agregó el producto", producto)
-
-    def eliminar_producto(self, producto):
-        self.productos.remove(producto)
-        print("Se eliminó el producto", producto)
+puesto_ojo_de_uva.mostrar_informacion()
+puesto_ojo_de_uva.cambiar_ubicacion("Plaza Central")
+puesto_ojo_de_uva.agregar_producto("Espumantes")
+puesto_ojo_de_uva.contratar_empleado("María")
+puesto_ojo_de_uva.cambiar_horario("9am - 7pm")
