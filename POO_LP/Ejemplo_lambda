@@ -1,0 +1,79 @@
+# # lambda es una funcuion  que se autoejecuta 
+# hola=lambda a,b:print(a+b)
+
+# # funcion normal
+# def suma(a,b):
+#     print(a+b)
+# suma(4,6)
+# hola(10,20)
+
+# # if ternario
+# ternario="soy verdad ternario" if True else "soy falso ternario"
+# print(ternario)
+
+# #if normal
+# if True:
+#     print("soy verdad")
+# else:
+#     print("soy mentira")
+
+# #metodo pitodico
+lista_Alumnos=[
+    {
+        "nombre":"Edwin",
+        "edad":"17",
+        "hobby":"danza",
+        "flaquita":"melody"
+    },
+    {
+        "nombre":"del mar",
+        "edad":"20",
+        "hobby":"saltar",
+        "flaquita":"melody"    
+    },
+    {
+        "nombre":"orlando",
+        "edad":"14",
+        "hobby":"ponchar",
+        "flaquita":"sami"
+    },
+    {
+        "nombre":"hans",
+        "edad":"15",
+        "hobby":"quemarse",
+        "flaquita":"hermana"
+    }
+]
+print(f"todos mis alumnitos {lista_Alumnos}")
+fans_melody=list(filter(lambda par:par["flaquita"]=="melody",lista_Alumnos))
+print(f"los que quieren con melody{fans_melody}")
+#########################################################################
+#map
+
+nuevo_objet=list(map(lambda par:{"nombre_alumno":par["nombre"],"germita":par["flaquita"]},lista_Alumnos))
+print(nuevo_objet)
+
+#############################################################################
+
+#tarea crear una lista con 10 objetos que contengan los datos de las tiendas comerciales
+#ejemplo
+# tiendas
+## ```
+# Tiendas=[
+#     {
+#         "nombre":"el pichilon",
+#         "categoria":["bodega"],
+#         "horario_atencion":(
+#             "dia" : 7 am -12 pm,
+#             "tarde": 2 pm - 8 pm
+#         ),
+#         "gerente":"nadine"
+
+#     }
+# ]
+## ```
+# observacion: las categorias sera: abarrotes farmacia, bodega, restaurante
+# los gerentes solo seran los siguientes: Edwin,china,cristhian, nadine
+# 1. crear un metodo que me filtre las tiendas que tiene cada gerente 
+# 2. crear un metodo que nos muestre ls negocios que tienen mas de dos categorias 
+# 3. crear un metodo que me muestre solo el nombren y ruc de las tiendas 
