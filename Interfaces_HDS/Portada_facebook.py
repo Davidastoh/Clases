@@ -1,7 +1,7 @@
 from tkinter import *
 ventana=Tk()
 ventana.geometry("300x350")
-ventana.title("mi ventana")
+ventana.title("Facebook")
 
 Usuario="David"
 Contraseña="1234"

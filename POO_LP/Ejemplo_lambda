@@ -76,4 +76,4 @@ print(nuevo_objet)
 # los gerentes solo seran los siguientes: Edwin,china,cristhian, nadine
 # 1. crear un metodo que me filtre las tiendas que tiene cada gerente 
 # 2. crear un metodo que nos muestre ls negocios que tienen mas de dos categorias 
-# 3. crear un metodo que me muestre solo el nombren y ruc de las tiendas 
+# 3. crear un metodo que me muestre solo el nombre y ruc de las tiendas 
