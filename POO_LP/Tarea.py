@@ -52,100 +52,69 @@ negocios = [
     {
         "nombre": "Tienda 1",
         "categoria": "Abarrotes",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00,
-        #     "Tarde ": 1:00 pm - 6:00 pm
-        #     ),
+        "horario":(8:00 am  6:00 pm),
         "gerente": "Edwin",
         "ruc": "12345678901"
     },
     {
         "nombre": "Tienda 2", 
         "categoria": "Farmacia",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00, 
-        #     "Tarde ": 1:00 pm - 6:00 pm
-        #     ),
+        "horario":(8:00 am  6:00 pm),
         "gerente": "China",
         "ruc": "23456789012"
     },
     {
         "nombre": "Tienda 3", 
         "categoria": "Bodega",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00, 
-        #     "Tarde ": 1:00 pm - 6:00 pm
-        #     ),
+        "horario":(8:00 am  6:00 pm),
         "gerente": "Cristian", 
         "ruc": "34567890123"
     },
     {
         "nombre": "Tienda 4", 
         "categoria": "Restaurantes",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00, 
-        #     "Tarde ": 1:00 pm - 6:00 pm
-        #     ), 
+        "horario":(8:00 am  6:00 pm),
         "gerente": "Nadine", 
         "ruc": "45678901234"
     },
     {
         "nombre": "Tienda 5", 
         "categoria": "Abarrotes, Farmacia",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00, 
-        #     "Tarde ": 1:00 pm - 6:00 pm
-        #     ), 
+        "horario":(8:00 am  6:00 pm),
         "gerente": "Edwin", 
         "ruc": "56789012345"
     },
     {
         "nombre": "Tienda 6",
         "categoria": "Bodega, Restaurantes",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00, 
-        #     "Tarde ": 1:00 pm - 6:00 p
-        #     ), 
-        "gerente": "China", 
+        "horario":(8:00 am  6:00 pm),: "China", 
         "ruc": "67890123456"
     },
     {
         "nombre": "Tienda 7", 
         "categoria": "Farmacia, Bodega",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00, 
-        #     "Tarde ": 1:00 pm - 6:00 pm
-        #     ), 
+        "horario":(8:00 am  6:00 pm),
         "gerente": "Cristian", 
         "ruc": "78901234567"
     },
     {
         "nombre": "Tienda 8", 
         "categoria": "Abarrotes, Restaurantes",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00, 
-        #     "Tarde ": 1:00 pm - 6:00 pm
-        #     ), 
+        "horario":(8:00 am  6:00 pm),
         "gerente": "Nadine", 
         "ruc": "89012345678"
     },
     {
         "nombre": "Tienda 9", 
         "categoria": "Farmacia, Restaurantes",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00, 
-        #     "Tarde ": 1:00 pm - 6:00 pm
-        #     ), 
+        "horario":(8:00 am  6:00 pm),
         "gerente": "Edwin", 
         "ruc": "90123456789"
     },
     {
         "nombre": "Tienda 10", 
         "categoria": "Abarrotes, Bodega",
-        # "horario_atencion":(
-        #     "Mañana": 8:00 am - 12.00, 
-        #     "Tarde ": 1:00 pm - 6:00 pm
-        #     ), 
+        "horario":(8:00 am  6:00 pm),
         "gerente": "China", 
         "ruc": "01234567890"
     }
