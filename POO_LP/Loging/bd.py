@@ -4,43 +4,43 @@
 
 Usuarios=[
     {
-        "DNI":"74374328",
-        "Nombre":"Adan",
-        "f_nacimiento":"25/10/2003",
-        "Edad":"18",
-        "Usuario":"Adan",
-        "Password":"1234"
+        "dni":"74374328",
+        "nombre":"Adan",
+        "fecha_nacimiento":"25/10/2003",
+        "edad":"",
+        "usuario":"Adan",
+        "password":"1234"
     },
     {
-        "DNI":"86576452",
-        "Nombre":"Max",
-        "f_nacimiento":"24/12/2011",
-        "Edad":"",
-        "Usuario":"Admin",
-        "Password":"1634"
+        "dni":"86576452",
+        "nombre":"Max",
+        "fecha_nacimiento":"24/12/2011",
+        "edad":"",
+        "usuario":"Admin",
+        "password":"1634"
     },
     {
-        "DNI":"13566452",
-        "Nombre":"Maximo",
-        "f_nacimiento":"02/12/2001",
-        "Edad":"",
-        "Usuario":"Maximus",
-        "Password":"3234"
+        "dni":"13566452",
+        "nombre":"Maximo",
+        "fecha_nacimiento":"02/12/2001",
+        "edad":"",
+        "usuario":"Maximus",
+        "password":"3234"
     },
     {
-        "DNI":"82722227",
-        "Nombre":"Nael",
-        "f_nacimiento":"23/12/2001",
-        "Edad":"",
-        "Usuario":"Nae",
-        "Password":"7234"
+        "dni":"82722227",
+        "nombre":"Nael",
+        "fecha_nacimiento":"23/12/2001",
+        "edad":"",
+        "usuario":"Nae",
+        "password":"7234"
     },
     {
-        "DNI":"82134622",
-        "Nombre":"yosh",
-        "f_nacimiento":"23/12/2001",
-        "Edad":"",
-        "Usuario":"yos",
-        "Password":"8888"
+        "dni":"82134622",
+        "nombre":"yosh",
+        "fecha_nacimiento":"23/12/2001",
+        "edad":"",
+        "usuario":"yos",
+        "password":"8888"
     }
 ]
