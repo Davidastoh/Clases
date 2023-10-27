@@ -37,7 +37,7 @@ text_contraseña.config(bg="Blue",fg="white",show="*")
 text_contraseña.pack()
 
 
-boton_evaluar=Button(ventana,text="Evaluar",command=evaluar_datos)
+boton_evaluar=Button(ventana,text="Ingresar",command=evaluar_datos)
 boton_evaluar.pack()
 
 
