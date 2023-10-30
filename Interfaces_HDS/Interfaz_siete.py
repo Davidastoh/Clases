@@ -1,51 +1,67 @@
-from tkinter import *
-ventana=Tk()
-ventana.geometry("500x350")
+import tkinter as tk
+
+def calcular():
+    num1 = float(entry_num1.get())
+    num2 = float(entry_num2.get())
+    
+    if operacion.get() == 1:
+        resultado = num1 + num2
+    elif operacion.get() == 2:
+        resultado = num1 - num2
+    elif operacion.get() == 3:
+        resultado = num1 * num2
+    elif operacion.get() == 4:
+        if num2 != 0:
+            resultado = num1 / num2
+        else:
+            resultado = "Error: División por cero"
+    
+    etiqueta_resultado.config(text="Resultado: " + str(resultado))
+
+def limpiar():
+    entry_num1.delete(0, tk.END)
+    entry_num2.delete(0, tk.END)
+    etiqueta_resultado.config(text="Resultado:")
+
+
+ventana = tk.Tk()
+ventana.geometry("400x350")
 ventana.title("Calculadora")
 
-# # Suma
-# a = 5
-# b = 3
-# resultado_suma = a + b
-# print(resultado_suma)  # Salida: 8
+etiqueta_num1 = tk.Label(ventana, text="Ingrese un numero")
+etiqueta_num1.pack()
 
-# # Resta
-# c = 10
-# d = 7
-# resultado_resta = c - d
-# print(resultado_resta)  # Salida: 3
+entry_num1 = tk.Entry(ventana)
+entry_num1.pack()
 
-etiqueta=Label(ventana,text="Ingrese un numero")
-etiqueta.pack()
-text_usuario=Entry(ventana)
-text_usuario.config(bg="white",fg="Black")
-text_usuario.pack()
+etiqueta_num2 = tk.Label(ventana, text="Ingrese un numero")
+etiqueta_num2.pack()
 
-etiqueta=Label(ventana,text="Ingrese un numero")
-etiqueta.pack()
-text_contraseña=Entry(ventana)
-text_contraseña.config(bg="white",fg="Black")
-text_contraseña.pack()
+entry_num2 = tk.Entry(ventana)
+entry_num2.pack()
 
-radioSuma=Radiobutton(ventana,text="Suma")
-radioSuma.pack()
+operacion = tk.IntVar()
 
-radioResta=Radiobutton(ventana,text="Resta")
-radioResta.pack()
+radio_sumar = tk.Radiobutton(ventana, text="Sumar", variable=operacion, value=1)
+radio_sumar.pack()
 
-radioMultiplicacion=Radiobutton(ventana,text="Multiplicacion")
-radioResta.pack()
+radio_restar = tk.Radiobutton(ventana, text="Restar", variable=operacion, value=2)
+radio_restar.pack()
 
-radioDivision=Radiobutton(ventana,text="Division")
-radioResta.pack()
+radio_multiplicar = tk.Radiobutton(ventana, text="Multiplicar", variable=operacion, value=3)
+radio_multiplicar.pack()
 
-# radioSumar=Radiobutton(ventana,text="Sumar",value=1,variable=info)
-# radioMasculino.pack()
+radio_dividir = tk.Radiobutton(ventana, text="Dividir", variable=operacion, value=4)
+radio_dividir.pack()
 
-# radioRestar=Radiobutton(ventana,text="Restar",value=0,variable=info)
-# radioFemenino.pack()
 
-# boton_calcular=Button(ventana,text="Calcular",command=Calcular)
-# boton_calcular.pack()
+boton_calcular = tk.Button(ventana, text="Calcular", command=calcular)
+boton_calcular.pack()
+
+boton_limpiar = tk.Button(ventana, text="Limpiar", command=limpiar)
+boton_limpiar.pack()
+
+etiqueta_resultado = tk.Label(ventana, text="Resultado:")
+etiqueta_resultado.pack()
 
 ventana.mainloop()
