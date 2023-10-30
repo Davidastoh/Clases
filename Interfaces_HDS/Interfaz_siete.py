@@ -29,14 +29,13 @@ ventana.geometry("400x350")
 ventana.title("Calculadora")
 
 etiqueta_num1 = tk.Label(ventana, text="Ingrese un numero")
+etiqueta_num1.grid(row=0, column=0)
 etiqueta_num1.pack()
-
 entry_num1 = tk.Entry(ventana)
 entry_num1.pack()
 
 etiqueta_num2 = tk.Label(ventana, text="Ingrese un numero")
 etiqueta_num2.pack()
-
 entry_num2 = tk.Entry(ventana)
 entry_num2.pack()
 
@@ -49,6 +48,7 @@ radio_restar = tk.Radiobutton(ventana, text="Restar", variable=operacion, value=
 radio_restar.pack()
 
 radio_multiplicar = tk.Radiobutton(ventana, text="Multiplicar", variable=operacion, value=3)
+
 radio_multiplicar.pack()
 
 radio_dividir = tk.Radiobutton(ventana, text="Dividir", variable=operacion, value=4)
@@ -65,3 +65,4 @@ etiqueta_resultado = tk.Label(ventana, text="Resultado:")
 etiqueta_resultado.pack()
 
 ventana.mainloop()
+
