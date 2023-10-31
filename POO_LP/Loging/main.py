@@ -5,53 +5,71 @@
 # verificar si el usuario si esta registrado o existe en mi registro 
 # validar usuario y password
 
-
-# class Usuario:
-#     def _init_(self, nombre, edad, fecha_nacimiento, dni, usuario, password):
-#         self.nombre = nombre
-#         self.edad = edad
-#         self.fecha_nacimiento = fecha_nacimiento
-#         self.dni = dni
-#         self.usuario = usuario
-#         self.password = Password
-#         self.registrado = False
-
-#     def actualizar_edad(self, nueva_edad):
-#         self.edad = nueva_edad
-
-#     def verificar_registro(self):
-#         if self.registrado:
-#             print("El usuario está registrado.")
-#         else:
-#             print("El usuario no está registrado.")
-
-#     def validar_usuario_password(self, usuario, password):
-#         if self.usuario == usuario and self.password == password:
-#             print("El usuario y contraseña son válidos.")
-#         else:
-#             print("El usuario y contraseña no son válidos.")
-            
-# Usuario = usuario("86576452","Max","24/12/2011","Admin","1634")
-# Usuario.verificar_registro()
-# Usuario.registrado = True
-# Usuario.validar_usuario_password("", "")
-
-from datetime import *
+from datetime import*
 from bd import *
+class Usuario:
+    def __init__(self, DNI, Nombre, F_nacimiento, Edad,Usuario, Password):
+        self.DNI=DNI
+        self.Nombre=Nombre
+        self.F_nacimiento=F_nacimiento
+        self.Edad=Edad
+        self.Usuario=Usuario
+        self.Password=Password
 
-def calcular_edad(fecha_nacimiento):
-    fecha_actual = datetime.now()
-    edad = fecha_actual.year - fecha_nacimiento.year
-    if fecha_nacimiento.month > fecha_actual.month or (fecha_nacimiento.month == fecha_actual.month and fecha_nacimiento.day > fecha_actual.day):
-        return edad
+    def mostrar_usuario(self, ide):
+        resultado=list(filter(lambda par:par['DNI']==ide,usuarios))
+        return f'''Aqui tienes los datos del usuario que buscaste:
+        {resultado}'''
+    
+    def agregar_edad(self, clave, valor):
+        for usuario in usuarios:
+            if usuario['DNI'] == self.DNI:
+                usuario[clave] = valor
+                return 'Se actualizó.'
+        return 'Usuario no encontrado.'
 
-for usuario in usuario:
-    fecha_nacimiento= datetime.striptime(usuario["f_nacimiento"],"%d/%m/%Y")
-    usuario["edad"] = int((datetime.now() == fecha_nacimiento).days/365)
-print(Usuarios)
-dni_buscar=12345678
+    def verificar_usuario(self, usuario_buscar):
+        for usuario in usuarios:
+            if usuario['Usuario'] == usuario_buscar:
+                return 'Usuario registrado.'
+        return 'Usuario no encontrado en los registros.'
 
-print(any(u["dni"] == dni_buscar for u in Usuarios))
-dni_validar=98765432
-password_validar="qwerty123"
-print(any(u["dny"] == dni_validar and u["password"] == password_validar for u in Usuarios))
+    def validar_usuario_password(self, usuario_a_validar, password_a_validar):
+        for usuario in usuarios:
+            if usuario['Usuario'] == usuario_a_validar and usuario['Password'] == password_a_validar:
+                return 'Usuario y contraseña válidos.'
+        return 'Usuario o contraseña incorrectos.'    
+
+    def actualizar_usuario(self, nombre=None, f_nacimiento=None, edad=None, usuario=None, password=None):
+        if nombre:
+            self.Nombre = nombre
+        if f_nacimiento:
+            self.F_nacimiento = f_nacimiento
+        if edad:
+            self.Edad = edad
+        if usuario:
+            self.Usuario = usuario
+        if password:
+            self.Password = password
+
+        return 'Usuario actualizado exitosamente.'
+
+actu = Usuario(74484162, "Adan", "10/12/2003", None, "AHC", "0717")
+print(actu.actualizar_usuario(nombre="Adam", edad=18, usuario="AHC123", password="newpassword"))
+
+actu=Usuario(74484162,"Adan","10/12/2003",None,"AHC","0717")
+print(actu.agregar_edad("edad", 20))
+print(actu.mostrar_usuario(74484162))
+
+usuario_a_buscar = "AHC"
+print(actu.verificar_usuario(usuario_a_buscar))
+print(actu.mostrar_usuario(74484162))
+
+usuario_a_validar = "AHC"
+password_a_validar = "0717"
+print(actu.validar_usuario_password(usuario_a_validar, password_a_validar))
+print(actu.mostrar_usuario(74484162))
+
+
+
+
