@@ -16,3 +16,6 @@ boton_saludar = tk.Button(ventana, text="Saludar", command=saludar)
 boton_saludar.pack()
 
 ventana.mainloop()
+
+
+
