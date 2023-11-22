@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import ttk
 from config import*
 class InterfazApp(Tk):
     def __init__(self):
@@ -58,8 +59,41 @@ class InterfazApp(Tk):
         relief=FLAT,bd=0,width=20,height=2,font=("Arial",10)).pack(pady=10)
 
         # Boton de Cancelar
-        self.cancelar=Button(self.cajas_botones,text="cancelar",bg=COLOR_BOTONES,fg="white",
+        self.cancelar=Button(self.cajas_botones,text="Cancelar",bg=COLOR_BOTONES,fg="white",
         relief=FLAT,bd=0,width=20,height=2,font=("Arial",10)).pack(pady=10)
         # Fin cajita de botones
+        
+        #Caja dedatos
+        self.cajas_datos=LabelFrame(self,text="Caja de datos",width=630,height=400,
+        bg=COLOR_FONDO_PRIMARIO,fg="white",font=("Arial",12),relief=FLAT,pady=20)
+        self.cajas_datos.grid(row=0,column=2,padx=20,pady=20)
+
+        #Caja de tabla
+        self.tabla_datos=ttk.Treeview(self.cajas_datos,columns=("#1","#2"))
+        self.tabla_datos.column("#0",width=100)
+        self.tabla_datos.column("#1",width=120)
+        self.tabla_datos.column("#2",width=100)
+
+        self.tabla_datos.heading("#0",text="Nombres")
+        self.tabla_datos.heading("#1",text="Apellidos")
+        self.tabla_datos.heading("#2",text="Celular")
+
+        alumnitos=[
+            ("moises","Peñadira","937463642"),
+            ("yadira","medafiel","9475747543"),
+            ("maria","de jory", "938746533"),
+            ("nadinne","guadalupe","974365754")
+        ]
+        for nom,ape,cel in alumnitos:
+            self.tabla_datos.insert("",END,text=nom,values=(ape,cel))
+
+        self.tabla_datos.place(x=0,y=0,width=430,height=520)
+
+
+
+
+
+# Mostrar la tabla de datos
+
 
 # altura es pady en cada self  despues d3e pack
