@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 from config import*
+from funciones import *
+
 class InterfazApp(Tk):
     def __init__(self):
         super().__init__()
@@ -47,19 +49,19 @@ class InterfazApp(Tk):
         self.cajas_botones.grid(row=0,column=1,padx=20,pady=20)
 
         # Boton de nuevo
-        self.nuevo=Button(self.cajas_botones,text="Nuevo",bg=COLOR_BOTONES,fg="white",
+        self.nuevo=Button(self.cajas_botones, command= lambda :f_nuevo(self), text="Nuevo",bg=COLOR_BOTONES,fg="white",
         relief=FLAT,bd=0,width=20,height=2,font=("Arial",10)).pack(pady=10)
 
         # Boton de Actualizar
-        self.actualizarctualizar=Button(self.cajas_botones,text="Actulizar",bg=COLOR_BOTONES,fg="white",
+        self.actualizarctualizar=Button(self.cajas_botones,command= lambda :f_actualizar(self), text="Actulizar",bg=COLOR_BOTONES,fg="white",
         relief=FLAT,bd=0,width=20,height=2,font=("Arial",10)).pack(pady=10)
 
         # Boton de Eliminar
-        self.eliminar=Button(self.cajas_botones,text="Eliminar",bg=COLOR_BOTONES,fg="white",
+        self.eliminar=Button(self.cajas_botones,command= lambda :f_eliminar(self),text="Eliminar",bg=COLOR_BOTONES,fg="white",
         relief=FLAT,bd=0,width=20,height=2,font=("Arial",10)).pack(pady=10)
 
         # Boton de Cancelar
-        self.cancelar=Button(self.cajas_botones,text="Cancelar",bg=COLOR_BOTONES,fg="white",
+        self.cancelar=Button(self.cajas_botones,command=lambda:f_limpiar(self),text="Cancelar",bg=COLOR_BOTONES,fg="white",
         relief=FLAT,bd=0,width=20,height=2,font=("Arial",10)).pack(pady=10)
         # Fin cajita de botones
         
@@ -86,14 +88,14 @@ class InterfazApp(Tk):
         ]
         for nom,ape,cel in alumnitos:
             self.tabla_datos.insert("",END,text=nom,values=(ape,cel))
+        
+        self.tabla_datos.bind("<Double-1>",lambda event:f_dobleClick(self,event))
 
         self.tabla_datos.place(x=0,y=0,width=430,height=520)
-
+# Fin de tabla de datos
 
 
 
 
 # Mostrar la tabla de datos
-
-
-# altura es pady en cada self  despues d3e pack
+# altura es pady en cada self despues de pack
