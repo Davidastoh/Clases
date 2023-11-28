@@ -63,8 +63,5 @@ def f_dobleClick(ventana,event):
         ventana.Apellidos_texto.insert(0,ape)
         ventana.Celular_texto.insert(0,cel)
 
-        ventana.tabla_datos.selection_remove(elem_actualizar)
-
     else:
         showinfo(title="Actualizar",message="Ningun dato selecionado para actualizar")
-        ventana.tabla_datos.selection_remove(elem_actualizar)
